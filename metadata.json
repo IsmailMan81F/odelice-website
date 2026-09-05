@@ -1,0 +1,6 @@
+{
+  "name": "O'délices - Messy, Juicy Burgers & Fast Food",
+  "description": "O'délices restaurant website featuring bold burgers, crispy chicken, artisan pizzas, tacos, platters, customer reviews, and delicious menus.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

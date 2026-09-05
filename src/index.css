@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+  font-family: 'Novecento Sans Condensed Bold';
+  src: url('/fonts/novecento-sans-condensed-bold.woff2') format('woff2'),
+       url('/fonts/novecento-sans-condensed-bold.woff') format('woff'),
+       url('/fonts/novecento-sans-condensed-bold.ttf') format('truetype'),
+       url('https://db.onlinewebfonts.com/t/3abaa5beee5ba3359e9ddf15057787c1.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Novecento Sans Condensed Bold';
+  src: url('/fonts/novecento-sans-condensed-bold.woff2') format('woff2'),
+       url('/fonts/novecento-sans-condensed-bold.woff') format('woff'),
+       url('/fonts/novecento-sans-condensed-bold.ttf') format('truetype'),
+       url('https://db.onlinewebfonts.com/t/3abaa5beee5ba3359e9ddf15057787c1.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Novecento Sans Condensed';
+  src: url('/fonts/novecento-sans-condensed-bold.woff2') format('woff2'),
+       url('/fonts/novecento-sans-condensed-bold.woff') format('woff'),
+       url('/fonts/novecento-sans-condensed-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: 'Bebas Neue', Impact, sans-serif;
+  --font-condensed: 'Bebas Neue', Impact, sans-serif;
+  --font-novecento: 'Novecento Sans Condensed Bold', 'Novecento Sans Condensed', 'NovecentoSansW01-CdBd', 'Novecento CondBold', 'Bebas Neue', Impact, sans-serif;
+  --color-brand-red: #b81414;
+  --color-brand-redHover: #991212;
+  --color-brand-yellow: #FCD306;
+  --color-brand-yellowHover: #eab308;
+  --color-brand-darkRed: #780c10;
+  --color-brand-charcoal: #4b1007;
+  --color-brand-footerDark: #4b1007;
+  --color-brand-deepBrown: #4b1007;
+}
+
+/* Default font family: Bebas Neue */
+*,
+*::before,
+*::after,
+html,
+body,
+input,
+button,
+textarea,
+select,
+a,
+p,
+span,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+nav,
+footer {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+}
+
+/* Big titles, hero headings, and red incline slider use Novecento Sans Condensed Bold */
+h1,
+h2,
+.font-novecento,
+.tilted-ribbon,
+.animate-marquee,
+.big-title {
+  font-family: 'Novecento Sans Condensed Bold', 'Novecento Sans Condensed', 'NovecentoSansW01-CdBd', 'Novecento CondBold', 'Bebas Neue', Impact, sans-serif !important;
+}
+
+/* Allow Font Awesome icons to render their respective icon glyphs */
+.fa,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+[class*="fa-"],
+[class*="fa-"]::before,
+[class*="fa-"]::after {
+  font-family: "Font Awesome 6 Brands", "Font Awesome 6 Free", FontAwesome !important;
+}
+
+body {
+  letter-spacing: 0.03em;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.tilted-ribbon {
+  transform: rotate(-2.6deg);
+  width: 112%;
+  margin-left: -6%;
+}
