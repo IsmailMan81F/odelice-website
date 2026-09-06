@@ -59,16 +59,16 @@ export default function MenuPage() {
             {t.menuPage.subtitle}
           </p>
 
-          {/* Top ORDER NOW Button (Black text on yellow background) */}
+          {/* Top ORDER NOW Button */}
           <div className="mb-8 sm:mb-10 flex justify-center">
-            <a
+            <button
               id="menu-top-order-now-btn"
-              href="tel:0674583706"
+              type="button"
               className="inline-flex items-center gap-2.5 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-lg sm:text-xl px-8 sm:px-10 py-3 sm:py-3.5 rounded-md shadow-xl transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
             >
               <span>{t.nav.orderNow}</span>
               <ArrowRight className="w-5 h-5 text-[#4b1007]" />
-            </a>
+            </button>
           </div>
 
           {/* Category Filter Chips / Buttons with smaller border radius (rounded-md like home page) */}
@@ -148,14 +148,14 @@ export default function MenuPage() {
           <p className="text-[#FCD306] text-base sm:text-xl md:text-2xl uppercase tracking-widest mb-8 font-normal">
             {t.menuPage.bottomSubtitle}
           </p>
-          <a
+          <button
             id="menu-bottom-order-now-btn"
-            href="tel:0674583706"
+            type="button"
             className="inline-flex items-center gap-2.5 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-xl sm:text-2xl px-10 sm:px-12 py-4 rounded-md shadow-xl transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
           >
             <span>{t.nav.orderNow}</span>
             <ArrowRight className="w-5 h-5 text-[#4b1007]" />
-          </a>
+          </button>
         </div>
       </main>
     </div>

@@ -58,7 +58,7 @@ export const translations = {
       welcome: "WELCOME TO O'DÉLICES",
       heading: 'BOLD FLAVORS MADE FRESH, EVERY SINGLE TIME.',
       p1: "At O'délices, we believe that great food begins with authentic passion and unapologetic quality. From smashing prime beef patties on a red-hot griddle to double-frying our signature spiced chicken, every bite is crafted to deliver maximum indulgence.",
-      p2: 'Located in Jijel (RQ99+GP6), we bring people together around hand-stretched pizzas, sizzling platters, loaded tacos, and monstrous burgers designed for true food lovers.',
+      p2: 'We bring people together around hand-stretched pizzas, sizzling platters, loaded tacos, and monstrous burgers designed for true food lovers.',
       feature1Title: 'HIGH HEAT SEAR',
       feature1Desc:
         'Crispy charred edges with tender, juicy centers on every patty and cut of meat.',
@@ -77,13 +77,12 @@ export const translations = {
         "EVERYTHING YOU NEED TO KNOW ABOUT DINING, SERVICE & CONVENIENCE AT O'DÉLICES",
     },
     footer: {
-      tagline:
-        "O'délices bold flavors made fresh, every time. Crafted with care. Served with pride.",
+      tagline: 'Bold flavors made fresh, every time. Crafted with care. Served with pride.',
       navigation: 'NAVIGATION',
       location: 'LOCATION',
       viewInGoogleMaps: 'VIEW IN GOOGLE MAPS',
       openingHours: 'OPENING HOURS',
-      rights: "© O'DÉLICES. ALL RIGHTS RESERVED.",
+      rights: '© STACKD. ALL RIGHTS RESERVED.',
     },
     language: {
       selectLanguage: 'Choose Language',
@@ -152,7 +151,7 @@ export const translations = {
       welcome: "BIENVENUE CHEZ O'DÉLICES",
       heading: 'DES SAVEURS AUDACIEUSES FAITES MAISON, À CHAQUE FOIS.',
       p1: "Chez O'délices, nous croyons qu’une cuisine d’exception commence par une passion sincère et une qualité sans compromis. Du bœuf smashé sur plaque brûlante au poulet frit signature doublement croustillant, chaque bouchée est pensée pour un plaisir intense.",
-      p2: 'Situé à Jijel (RQ99+GP6), nous rassemblons les passionnés de bonne cuisine autour de pizzas artisanales, d’assiettes généreuses, de tacos savoureux et de burgers colossaux.',
+      p2: 'Nous rassemblons les passionnés de bonne cuisine autour de pizzas artisanales, d’assiettes généreuses, de tacos savoureux et de burgers colossaux.',
       feature1Title: 'SAISI À FEU VIF',
       feature1Desc:
         'Bords croustillants caramélisés et cœur tendre et juteux sur chaque viande.',
@@ -172,12 +171,12 @@ export const translations = {
     },
     footer: {
       tagline:
-        "O'délices : des saveurs audacieuses faites maison, à chaque commande. Préparé avec soin. Servi avec fierté.",
+        'Des saveurs audacieuses faites maison, à chaque commande. Préparé avec soin. Servi avec fierté.',
       navigation: 'NAVIGATION',
       location: 'EMPLACEMENT',
       viewInGoogleMaps: 'VOIR SUR GOOGLE MAPS',
       openingHours: "HORAIRES D'OUVERTURE",
-      rights: "© O'DÉLICES. TOUS DROITS RÉSERVÉS.",
+      rights: '© STACKD. TOUS DROITS RÉSERVÉS.',
     },
     language: {
       selectLanguage: 'Choisir la langue',

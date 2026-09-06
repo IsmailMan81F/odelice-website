@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import ODelicesLogo from './ODelicesLogo';
 
 interface HeaderProps {
   currentPage?: 'home' | 'menu' | 'about';
@@ -71,15 +70,15 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             </button>
           </nav>
 
-          {/* Logo (Centered on desktop, left on mobile) */}
+          {/* Brand (Centered on desktop, left on mobile) */}
           <div className="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 text-left md:text-center pointer-events-auto z-10 flex items-center">
             <button
               id="logo-brand"
               onClick={() => handleNavClick('home')}
               className="flex items-center justify-center text-white hover:text-[#FCD306] transition-colors select-none cursor-pointer bg-transparent border-none p-0 group focus:outline-none"
-              aria-label="O'délices Home"
+              aria-label="STACKD Home"
             >
-              <ODelicesLogo src="/assets/odelices-logo-name.svg" className="h-8 w-auto transition-transform duration-200 group-hover:scale-105 drop-shadow-md" />
+              <span className="font-novecento text-3xl tracking-wider">STACKD</span>
             </button>
           </div>
 
@@ -88,15 +87,15 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             {/* Language Selector with Icon (Desktop & Mobile header) */}
             <LanguageSwitcher variant="header" />
 
-            {/* Desktop ORDER NOW Button with #4b1007 text & yellow background */}
-            <a
+            {/* Desktop ORDER NOW Button */}
+            <button
               id="desktop-order-now-btn"
-              href="tel:0674583706"
+              type="button"
               className="hidden md:inline-flex items-center gap-2 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-base lg:text-lg px-5 lg:px-6 py-2 sm:py-2.5 rounded-md shadow-md transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
             >
               <span>{t.nav.orderNow}</span>
               <ArrowRight className="w-4 h-4 text-[#4b1007]" />
-            </a>
+            </button>
 
             {/* Mobile Hamburger Button */}
             <button
@@ -163,14 +162,13 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             <LanguageSwitcher variant="drawer" />
           </div>
 
-          <a
-            href="tel:0674583706"
-            onClick={() => setMobileMenuOpen(false)}
+          <button
+            type="button"
             className="w-full inline-flex items-center justify-center gap-2 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-xl py-3 rounded-md shadow-lg uppercase font-normal mt-2 transform hover:scale-105 duration-200"
           >
             <span>{t.nav.orderNow}</span>
             <ArrowRight className="w-4 h-4 text-[#4b1007]" />
-          </a>
+          </button>
         </nav>
       </div>
     </>

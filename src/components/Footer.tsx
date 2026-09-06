@@ -1,8 +1,7 @@
-import { MapPin, ExternalLink } from 'lucide-react';
+import { ExternalLink, MapPin } from 'lucide-react';
 import { getOpeningHours } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import ODelicesLogo from './ODelicesLogo';
 
 interface FooterProps {
   onNavigate?: (page: 'home' | 'menu' | 'about', sectionId?: string) => void;
@@ -31,9 +30,9 @@ export default function Footer({ onNavigate }: FooterProps) {
             <button
               onClick={() => handleNav('home')}
               className="flex items-center text-white hover:text-[#FCD306] transition-colors mb-4 cursor-pointer bg-transparent border-none p-0 text-left group"
-              aria-label="O'délices Home"
+              aria-label="STACKD Home"
             >
-              <ODelicesLogo className="h-24 w-auto drop-shadow-md group-hover:scale-105 transition-transform" />
+              <span className="font-novecento text-4xl tracking-wider">STACKD</span>
             </button>
             <p className="text-white text-sm sm:text-base leading-relaxed mb-6 max-w-sm tracking-wider font-normal">
               {t.footer.tagline}
@@ -123,17 +122,15 @@ export default function Footer({ onNavigate }: FooterProps) {
             </h4>
             <div className="flex items-start gap-2.5 text-white text-sm sm:text-base tracking-wider mb-4">
               <MapPin className="w-5 h-5 text-white shrink-0 mt-0.5" />
-              <span className="uppercase text-white">RQ99+GP6, JIJEL</span>
+              <span className="uppercase text-white">LOCATION DETAILS</span>
             </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&query=RQ99%2BGP6%2C+JIJEL"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
               className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
             >
               <span>{t.footer.viewInGoogleMaps}</span>
               <ExternalLink className="w-4 h-4" />
-            </a>
+            </button>
           </div>
 
           {/* Col 4: OPENING HOURS */}
