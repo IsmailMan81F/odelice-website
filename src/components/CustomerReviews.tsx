@@ -10,9 +10,9 @@ export default function CustomerReviews({ reviews }: CustomerReviewsProps) {
   const { t } = useLanguage();
 
   return (
-    <section id="testimonials" className="bg-[#FCD306] pt-16 pb-24 px-4 sm:px-6 md:px-10 relative z-20">
+    <section id="avis" className="bg-[#FCD306] pt-16 pb-24 px-4 sm:px-6 md:px-10 relative z-20 scroll-mt-16">
       <div className="max-w-7xl mx-auto">
-        {/* Title - Verified Bebas Neue */}
+        {/* Title */}
         <div className="text-center mb-12 sm:mb-16">
           <h2
             id="reviews-heading"
@@ -29,7 +29,7 @@ export default function CustomerReviews({ reviews }: CustomerReviewsProps) {
             <div
               key={`${rev.id}-${idx}`}
               id={`review-card-${idx}`}
-              className="bg-white rounded-xl p-6 flex flex-col justify-between shadow-sm text-center transition-transform hover:-translate-y-1 duration-200"
+              className="bg-white rounded-xl p-6 flex flex-col justify-between shadow-sm text-center transition-transform hover:-translate-y-1 duration-200 border border-stone-100"
             >
               <div>
                 {/* 5 Stars */}
@@ -45,13 +45,13 @@ export default function CustomerReviews({ reviews }: CustomerReviewsProps) {
                   ))}
                 </div>
 
-                {/* Card Title - Verified Bebas Neue */}
+                {/* Card Title */}
                 <h3 className="text-xl sm:text-2xl text-[#4b1007] font-normal uppercase tracking-wider mb-3">
                   {rev.title}
                 </h3>
 
-                {/* Review Text - Verified Bebas Neue */}
-                <p className="text-[#4b1007]/80 text-sm sm:text-base leading-relaxed tracking-wide">
+                {/* Review Text - Using font-inter */}
+                <p className="font-inter text-stone-600 text-sm leading-relaxed tracking-normal font-normal">
                   {rev.quote}
                 </p>
               </div>

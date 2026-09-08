@@ -27,7 +27,7 @@ export default function FoodCard({ item }: FoodCardProps) {
         <h3 className="text-xl sm:text-2xl text-[#4b1007] tracking-wider uppercase font-normal">
           {item.name}
         </h3>
-        <p className="text-[#4b1007]/70 text-sm sm:text-base mt-1 leading-snug tracking-wide line-clamp-2">
+        <p className="font-inter text-stone-600 text-xs sm:text-sm mt-1 leading-snug tracking-normal line-clamp-2">
           {item.description}
         </p>
 

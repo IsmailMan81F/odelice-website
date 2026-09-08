@@ -3,9 +3,10 @@ export const translations = {
     nav: {
       home: 'ACCUEIL',
       menu: 'MENU',
-      about: 'À PROPOS',
-      orderNow: 'COMMANDER',
+      reviews: 'AVIS',
       contact: 'CONTACT',
+      orderNow: 'COMMANDER',
+      about: 'À PROPOS',
     },
     hero: {
       title1: 'GOURMAND, JUTEUX',
@@ -19,7 +20,7 @@ export const translations = {
       part4: 'ET UNE QUALITÉ AUTHENTIQUE',
     },
     ribbon: {
-      delivery: 'DISPONIBLE EN LIVRAISON À DOMICILE',
+      delivery: 'DISPONIBLE EN LIVRAISON & À EMPORTER • COMMANDEZ AU 0674 58 37 06',
     },
     favorites: {
       title1: 'SAVOUREZ NOS',
@@ -34,12 +35,14 @@ export const translations = {
         'Des burgers juteux et du poulet croustillant préparés à la commande, assaisonnés à la perfection et servis chauds.',
       cta: 'EN SAVOIR PLUS',
     },
-    reviews: {
-      title1: 'DES CLIENTS QUI',
-      title2: "RAFFOLENT DÉJÀ D'O'DÉLICES",
+    menu: {
+      title: 'MENU',
+      subtitle:
+        'PIZZAS ARTISANALES • BURGERS SAVOUREUX • TACOS GOURMANDS • ASSIETTES & BOISSONS',
+      allItems: 'TOUT LE MENU',
     },
     menuPage: {
-      title: 'NOTRE CARTE COMPLÈTE',
+      title: 'NOTRE MENU COMPLET',
       subtitle:
         'PIZZAS ARTISANALES • TACOS GOURMANDS • BURGERS JUTEUX • ASSIETTES COMPLÈTES',
       allItems: 'TOUS LES ARTICLES',
@@ -76,9 +79,13 @@ export const translations = {
       amenitiesSubtitle:
         "TOUT CE QUE VOUS DEVEZ SAVOIR SUR LA RESTAURATION ET LES SERVICES CHEZ O'DÉLICES",
     },
+    reviews: {
+      title1: 'CE QUE DISENT',
+      title2: 'NOS CLIENTS',
+    },
     footer: {
       tagline:
-        'Des saveurs audacieuses faites maison, à chaque commande. Préparé avec soin. Servi avec fierté.',
+        'Le meilleur du fast-food préparé avec des ingrédients frais. Sur place, à emporter ou en livraison.',
       navigation: 'NAVIGATION',
       location: 'EMPLACEMENT',
       viewInGoogleMaps: 'VOIR SUR GOOGLE MAPS',

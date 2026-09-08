@@ -45,6 +45,7 @@
   --color-brand-charcoal: #4b1007;
   --color-brand-footerDark: #4b1007;
   --color-brand-deepBrown: #4b1007;
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 /* Default font family: Bebas Neue */
@@ -79,6 +80,13 @@ h2,
 .animate-marquee,
 .big-title {
   font-family: 'Novecento Sans Condensed Bold', 'Novecento Sans Condensed', 'NovecentoSansW01-CdBd', 'Novecento CondBold', 'Bebas Neue', Impact, sans-serif !important;
+}
+
+/* Inter typeface for descriptions */
+.font-inter,
+.font-inter * {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  text-transform: none;
 }
 
 /* Allow Font Awesome icons to render their respective icon glyphs */

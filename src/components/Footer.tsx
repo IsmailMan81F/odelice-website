@@ -3,16 +3,25 @@ import { getOpeningHours } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 
 interface FooterProps {
-  onNavigate?: (page: 'home' | 'menu' | 'about', sectionId?: string) => void;
+  onNavigate?: (sectionId: string) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
   const { language, t } = useLanguage();
   const openingHours = getOpeningHours(language);
 
-  const handleNav = (page: 'home' | 'menu' | 'about', sectionId?: string) => {
+  const scrollToSection = (sectionId: string) => {
     if (onNavigate) {
-      onNavigate(page, sectionId);
+      onNavigate(sectionId);
+      return;
+    }
+    if (sectionId === 'hero' || sectionId === 'hero-section') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -27,7 +36,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Col 1: Brand & Social (span 4) */}
           <div className="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6">
             <button
-              onClick={() => handleNav('home')}
+              onClick={() => scrollToSection('hero')}
               className="flex items-center text-white hover:opacity-90 transition-opacity mb-4 cursor-pointer bg-transparent border-none p-0 text-left group"
               aria-label="O'délices Accueil"
             >
@@ -90,7 +99,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3 text-sm sm:text-base text-white tracking-widest uppercase">
               <li>
                 <button
-                  onClick={() => handleNav('home')}
+                  onClick={() => scrollToSection('hero')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
                   {t.nav.home}
@@ -98,7 +107,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('menu')}
+                  onClick={() => scrollToSection('menu')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
                   {t.nav.menu}
@@ -106,10 +115,18 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNav('about')}
+                  onClick={() => scrollToSection('avis')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
-                  {t.nav.about}
+                  {t.nav.reviews}
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => scrollToSection('contact')}
+                  className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
+                >
+                  {t.nav.contact}
                 </button>
               </li>
             </ul>

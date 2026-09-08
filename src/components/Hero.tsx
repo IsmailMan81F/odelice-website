@@ -13,15 +13,17 @@ export default function Hero({ onExploreMenu }: HeroProps) {
       id="hero-section"
       className="relative min-h-[640px] sm:min-h-[720px] h-[92vh] max-h-[860px] flex items-center justify-center overflow-hidden bg-[#120505] px-4"
     >
-      {/* Background Image & Overlays */}
-      <div className="absolute inset-0 z-0">
+      {/* Background Storefront Image & Darkening Overlays */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAxBbRSrNc4cRKBn0PooUKukCsBhTqtc5WMUeCe0s1ig0IjOhADIXFg-uJMbThVIY3hard9uZi8POAiaHddTeuo23HhlntCTVckJNnq2O8UiJKfdw32dDUeROcTPeAUr3liLtsmtrK9Ggh1QDWsfEYOPsBXxKthavD73-eaZO_4vn260jASdnhpdoJK5-peHUNEEBsN2XTjRrDR9ZVhRZCSrso27kbxMA0D5rqaomiuq8DKwwVRUM"
-          alt="Delicious gourmet burger with fries and beverage"
+          src="/assets/hero-storefront.jpg"
+          alt="Restaurant O'délices"
           referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-center filter brightness-[0.72] contrast-[1.12]"
+          className="w-full h-full object-cover object-center filter brightness-[0.58] contrast-[1.18]"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/60" />
+        {/* Darkening Gradients */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/75" />
+        <div className="absolute inset-0 bg-[#120505]/40" />
       </div>
 
       {/* Hero Content - All texts in Bebas Neue */}

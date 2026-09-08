@@ -3,120 +3,57 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import TestimonialQuote from './components/TestimonialQuote';
 import MarqueeRibbon from './components/MarqueeRibbon';
 import MenuSection from './components/MenuSection';
-import PromoSection from './components/PromoSection';
 import CustomerReviews from './components/CustomerReviews';
-import MenuPage from './components/MenuPage';
-import AboutPage from './components/AboutPage';
 import Footer from './components/Footer';
 import StickyOrderButton from './components/StickyOrderButton';
-import { getMenuItems, getTestimonials } from './data';
+import { getTestimonials } from './data';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
 function AppContent() {
   const { language } = useLanguage();
-  const [currentPage, setCurrentPage] = useState<'home' | 'menu' | 'about'>(() => {
-    if (typeof window !== 'undefined') {
-      if (window.location.pathname === '/menu' || window.location.hash === '#menu-page') {
-        return 'menu';
-      }
-      if (window.location.pathname === '/about' || window.location.hash === '#about') {
-        return 'about';
-      }
-    }
-    return 'home';
-  });
+  const testimonials = getTestimonials(language);
 
-  // Listen to browser forward/back buttons
-  useEffect(() => {
-    const handlePopState = () => {
-      if (window.location.pathname === '/menu' || window.location.hash === '#menu-page') {
-        setCurrentPage('menu');
-      } else if (window.location.pathname === '/about' || window.location.hash === '#about') {
-        setCurrentPage('about');
-      } else {
-        setCurrentPage('home');
-      }
-    };
-
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
-
-  const handleNavigate = (page: 'home' | 'menu' | 'about', sectionId?: string) => {
-    if (page === 'menu') {
-      window.history.pushState({}, '', '/menu');
-      setCurrentPage('menu');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (page === 'about') {
-      window.history.pushState({}, '', '/about');
-      setCurrentPage('about');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      window.history.pushState({}, '', '/');
-      setCurrentPage('home');
-      if (sectionId) {
-        setTimeout(() => {
-          const el = document.getElementById(sectionId);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
-      } else {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+  const handleScrollToMenu = () => {
+    const el = document.getElementById('menu');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
-  const menuItems = getMenuItems(language);
-  const testimonials = getTestimonials(language);
-
   return (
     <div className="min-h-screen bg-white text-[#4b1007] overflow-x-hidden selection:bg-[#FCD306] selection:text-[#4b1007]">
-      {/* Top Absolute Navigation Bar (non-sticky, disappears on scroll) */}
-      <Header currentPage={currentPage} onNavigate={handleNavigate} />
+      {/* Sticky Header with blur on scroll, transparent at top */}
+      <Header />
 
-      {currentPage === 'home' && (
-        <main>
-          {/* Hero Section */}
-          <Hero onExploreMenu={() => handleNavigate('menu')} />
+      <main>
+        {/* 1. Hero Section with Storefront Image and Restored Headline */}
+        <Hero onExploreMenu={handleScrollToMenu} />
 
-          {/* Testimonial Quote Banner */}
-          <TestimonialQuote />
+        {/* Restored Yellow Quote Section */}
+        <TestimonialQuote />
 
-          {/* Top Tilted Delivery Ribbon */}
-          <MarqueeRibbon topBgColor="bg-[#FCD306]" bottomBgColor="bg-[#f7f5f2]" />
+        {/* Dynamic Delivery Ribbon transition between yellow quote and menu */}
+        <MarqueeRibbon topBgColor="bg-[#FCD306]" bottomBgColor="bg-[#f7f5f2]" />
 
-          {/* Indulge in Our Exquisite Favorites (6 Food Cards linked to /menu) */}
-          <MenuSection
-            items={menuItems}
-            onExploreAll={() => handleNavigate('menu')}
-          />
+        {/* 2. Menu Section: NOTRE CARTE COMPLÈTE (Pizzas, Burgers, Tacos, Plats, Drinks) */}
+        <MenuSection />
 
-          {/* Big Burgers Promo Banner */}
-          <PromoSection onMoreAboutUs={() => handleNavigate('about')} />
+        {/* Delivery Ribbon transition before Customer Reviews */}
+        <MarqueeRibbon topBgColor="bg-[#f7f5f2]" bottomBgColor="bg-[#FCD306]" />
 
-          {/* Bottom Tilted Delivery Ribbon */}
-          <MarqueeRibbon topBgColor="bg-[#160a08]" bottomBgColor="bg-[#FCD306]" />
+        {/* 3. Testimonials / Reviews Section */}
+        <CustomerReviews reviews={testimonials} />
+      </main>
 
-          {/* Customer Reviews Section (4 Cards) */}
-          <CustomerReviews reviews={testimonials} />
-        </main>
-      )}
+      {/* 4. Footer with in-page section links, address, and hours */}
+      <Footer />
 
-      {currentPage === 'menu' && <MenuPage />}
-
-      {currentPage === 'about' && <AboutPage onNavigate={handleNavigate} />}
-
-      {/* Footer with Navigation, Location, Opening Hours, Brand & Copyright */}
-      <Footer onNavigate={handleNavigate} />
-
-      {/* Sticky Floating Order / Call Button (always fixed to bottom-right) */}
+      {/* Sticky Floating Order / Call Button (fixed at bottom-right) */}
       <StickyOrderButton />
     </div>
   );
