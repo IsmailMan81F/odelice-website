@@ -577,24 +577,24 @@ export const OPENING_HOURS_FR: OpeningHour[] = [
   { day: 'VENDREDI', hours: '3:30 PM–12 AM' },
 ];
 
-export function getMenuItems(language: Language): MenuItem[] {
-  return language === 'fr' ? MENU_ITEMS_FR : MENU_ITEMS_EN;
+export function getMenuItems(language?: Language): MenuItem[] {
+  return MENU_ITEMS_FR;
 }
 
-export function getMenuCategories(language: Language): MenuCategory[] {
-  return language === 'fr' ? MENU_CATEGORIES_FR : MENU_CATEGORIES_EN;
+export function getMenuCategories(language?: Language): MenuCategory[] {
+  return MENU_CATEGORIES_FR;
 }
 
-export function getTestimonials(language: Language): Testimonial[] {
-  return language === 'fr' ? TESTIMONIALS_FR : TESTIMONIALS_EN;
+export function getTestimonials(language?: Language): Testimonial[] {
+  return TESTIMONIALS_FR;
 }
 
-export function getOpeningHours(language: Language): OpeningHour[] {
-  return language === 'fr' ? OPENING_HOURS_FR : OPENING_HOURS_EN;
+export function getOpeningHours(language?: Language): OpeningHour[] {
+  return OPENING_HOURS_FR;
 }
 
 // Default export values for standard imports
-export const MENU_ITEMS = MENU_ITEMS_EN;
-export const MENU_CATEGORIES = MENU_CATEGORIES_EN;
-export const TESTIMONIALS = TESTIMONIALS_EN;
-export const OPENING_HOURS = OPENING_HOURS_EN;
+export const MENU_ITEMS = MENU_ITEMS_FR;
+export const MENU_CATEGORIES = MENU_CATEGORIES_FR;
+export const TESTIMONIALS = TESTIMONIALS_FR;
+export const OPENING_HOURS = OPENING_HOURS_FR;

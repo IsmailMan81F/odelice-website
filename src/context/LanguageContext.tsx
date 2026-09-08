@@ -11,15 +11,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = (localStorage.getItem('odelices_language') || localStorage.getItem('stackd_language')) as Language;
-      if (saved === 'en' || saved === 'fr') {
-        return saved;
-      }
-    }
-    return 'en'; // Default to English as requested
-  });
+  const [language, setLanguageState] = useState<Language>('fr');
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
@@ -31,14 +23,15 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      document.documentElement.lang = language;
+      localStorage.setItem('odelices_language', 'fr');
+      document.documentElement.lang = 'fr';
     }
-  }, [language]);
+  }, []);
 
   const value: LanguageContextType = {
-    language,
+    language: 'fr',
     setLanguage,
-    t: translations[language],
+    t: translations.fr,
   };
 
   return (

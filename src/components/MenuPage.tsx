@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { getMenuCategories } from '../data';
 import { useLanguage } from '../context/LanguageContext';
 import FoodCard from './FoodCard';
@@ -55,21 +55,9 @@ export default function MenuPage() {
             {t.menuPage.title}
           </h1>
 
-          <p className="text-white text-base sm:text-xl md:text-2xl tracking-widest uppercase font-normal max-w-3xl mx-auto mb-6 sm:mb-8">
+          <p className="text-white text-base sm:text-xl md:text-2xl tracking-widest uppercase font-normal max-w-3xl mx-auto mb-8 sm:mb-10">
             {t.menuPage.subtitle}
           </p>
-
-          {/* Top ORDER NOW Button */}
-          <div className="mb-8 sm:mb-10 flex justify-center">
-            <button
-              id="menu-top-order-now-btn"
-              type="button"
-              className="inline-flex items-center gap-2.5 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-lg sm:text-xl px-8 sm:px-10 py-3 sm:py-3.5 rounded-md shadow-xl transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
-            >
-              <span>{t.nav.orderNow}</span>
-              <ArrowRight className="w-5 h-5 text-[#4b1007]" />
-            </button>
-          </div>
 
           {/* Category Filter Chips / Buttons with smaller border radius (rounded-md like home page) */}
           <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
@@ -141,21 +129,13 @@ export default function MenuPage() {
         ))}
 
         {/* Bottom CTA Box after all cards */}
-        <div className="mt-16 sm:mt-24 mb-6 text-center bg-[#4b1007] text-white p-8 sm:p-14 rounded-2xl border border-[#350b05] shadow-2xl max-w-3xl mx-auto">
-          <h3 className="font-novecento text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tight mb-2 leading-none">
+        <div className="mt-16 sm:mt-24 mb-6 text-center bg-[#4b1007] text-white p-8 sm:p-12 rounded-2xl border border-[#350b05] shadow-2xl max-w-3xl mx-auto">
+          <h3 className="font-novecento text-4xl sm:text-5xl md:text-6xl text-white uppercase tracking-tight mb-3 leading-none">
             {t.menuPage.bottomTitle}
           </h3>
-          <p className="text-[#FCD306] text-base sm:text-xl md:text-2xl uppercase tracking-widest mb-8 font-normal">
+          <p className="text-[#FCD306] text-base sm:text-xl md:text-2xl uppercase tracking-widest font-normal">
             {t.menuPage.bottomSubtitle}
           </p>
-          <button
-            id="menu-bottom-order-now-btn"
-            type="button"
-            className="inline-flex items-center gap-2.5 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-xl sm:text-2xl px-10 sm:px-12 py-4 rounded-md shadow-xl transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
-          >
-            <span>{t.nav.orderNow}</span>
-            <ArrowRight className="w-5 h-5 text-[#4b1007]" />
-          </button>
         </div>
       </main>
     </div>

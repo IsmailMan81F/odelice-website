@@ -14,6 +14,7 @@ import CustomerReviews from './components/CustomerReviews';
 import MenuPage from './components/MenuPage';
 import AboutPage from './components/AboutPage';
 import Footer from './components/Footer';
+import StickyOrderButton from './components/StickyOrderButton';
 import { getMenuItems, getTestimonials } from './data';
 import { LanguageProvider, useLanguage } from './context/LanguageContext';
 
@@ -114,6 +115,9 @@ function AppContent() {
 
       {/* Footer with Navigation, Location, Opening Hours, Brand & Copyright */}
       <Footer onNavigate={handleNavigate} />
+
+      {/* Sticky Floating Order / Call Button (always fixed to bottom-right) */}
+      <StickyOrderButton />
     </div>
   );
 }

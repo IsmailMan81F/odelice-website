@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
 
 interface HeaderProps {
   currentPage?: 'home' | 'menu' | 'about';
@@ -10,7 +8,18 @@ interface HeaderProps {
 
 export default function Header({ currentPage = 'home', onNavigate }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useLanguage();
+
+  // Detect scroll to toggle sticky blur effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Lock body scroll when mobile drawer is open
   useEffect(() => {
@@ -32,14 +41,18 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
     <>
       <header
         id="main-header"
-        className="absolute top-0 left-0 right-0 w-full z-50 bg-transparent border-none px-4 sm:px-6 md:px-12 lg:px-16 py-5 md:py-6 pointer-events-auto"
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 pointer-events-auto px-4 sm:px-6 md:px-12 lg:px-16 ${
+          isScrolled
+            ? 'bg-black/65 backdrop-blur-md border-b border-white/10 shadow-lg py-3 sm:py-3.5'
+            : 'bg-transparent border-none py-5 md:py-6'
+        }`}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between text-white relative">
           {/* Primary Navigation Links (Desktop only) */}
           <nav
             aria-label="Main Navigation"
             id="desktop-nav"
-            className="hidden md:flex items-center space-x-7 lg:space-x-8 text-base lg:text-lg tracking-widest z-10 uppercase"
+            className="hidden md:flex items-center space-x-7 lg:space-x-8 text-base lg:text-lg tracking-widest z-10 uppercase font-normal"
           >
             <button
               id="nav-link-home"
@@ -70,38 +83,33 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             </button>
           </nav>
 
-          {/* Brand (Centered on desktop, left on mobile) */}
+          {/* Brand Logo (Centered on desktop, left on mobile) */}
           <div className="md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 text-left md:text-center pointer-events-auto z-10 flex items-center">
             <button
               id="logo-brand"
               onClick={() => handleNavClick('home')}
-              className="flex items-center justify-center text-white hover:text-[#FCD306] transition-colors select-none cursor-pointer bg-transparent border-none p-0 group focus:outline-none"
-              aria-label="STACKD Home"
+              className="flex items-center justify-center text-white hover:opacity-90 transition-opacity select-none cursor-pointer bg-transparent border-none p-0 group focus:outline-none"
+              aria-label="O'délices Accueil"
             >
-              <span className="font-novecento text-3xl tracking-wider">STACKD</span>
+              <img
+                src="/assets/odelice-logo-name.svg"
+                alt="O'délices"
+                className={`transition-all duration-300 w-auto brightness-0 invert object-contain ${
+                  isScrolled ? 'h-6 sm:h-7 md:h-8' : 'h-7 sm:h-8 md:h-9'
+                }`}
+              />
             </button>
           </div>
 
-          {/* Right side controls: Language Switcher + ORDER NOW button on desktop + Hamburger button on mobile */}
-          <div className="flex items-center gap-2.5 sm:gap-4 z-10">
-            {/* Language Selector with Icon (Desktop & Mobile header) */}
-            <LanguageSwitcher variant="header" />
-
-            {/* Desktop ORDER NOW Button */}
-            <button
-              id="desktop-order-now-btn"
-              type="button"
-              className="hidden md:inline-flex items-center gap-2 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-base lg:text-lg px-5 lg:px-6 py-2 sm:py-2.5 rounded-md shadow-md transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal"
-            >
-              <span>{t.nav.orderNow}</span>
-              <ArrowRight className="w-4 h-4 text-[#4b1007]" />
-            </button>
+          {/* Right side spacer for desktop to maintain center balance, and Mobile Hamburger Button */}
+          <div className="flex items-center z-10">
+            <div className="hidden md:block w-32" aria-hidden="true" />
 
             {/* Mobile Hamburger Button */}
             <button
               id="mobile-menu-toggle"
               aria-expanded={mobileMenuOpen}
-              aria-label="Toggle navigation menu"
+              aria-label="Menu"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden relative w-10 h-10 flex items-center justify-center text-white hover:text-[#FCD306] focus:outline-none transition-colors cursor-pointer"
             >
@@ -131,7 +139,7 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             : 'opacity-0 pointer-events-none -translate-y-4'
         }`}
       >
-        <nav className="w-full max-w-xs flex flex-col items-center justify-center space-y-6 text-center text-3xl sm:text-4xl tracking-widest text-white">
+        <nav className="w-full max-w-xs flex flex-col items-center justify-center space-y-8 text-center text-3xl sm:text-4xl tracking-widest text-white">
           <button
             onClick={() => handleNavClick('home')}
             className={`transition-colors uppercase transform hover:scale-110 duration-200 tracking-widest cursor-pointer bg-transparent border-none ${
@@ -155,19 +163,6 @@ export default function Header({ currentPage = 'home', onNavigate }: HeaderProps
             }`}
           >
             {t.nav.about}
-          </button>
-
-          {/* Language selector in drawer */}
-          <div className="w-full pt-2">
-            <LanguageSwitcher variant="drawer" />
-          </div>
-
-          <button
-            type="button"
-            className="w-full inline-flex items-center justify-center gap-2 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-xl py-3 rounded-md shadow-lg uppercase font-normal mt-2 transform hover:scale-105 duration-200"
-          >
-            <span>{t.nav.orderNow}</span>
-            <ArrowRight className="w-4 h-4 text-[#4b1007]" />
           </button>
         </nav>
       </div>

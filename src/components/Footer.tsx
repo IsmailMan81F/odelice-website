@@ -1,7 +1,6 @@
 import { ExternalLink, MapPin } from 'lucide-react';
 import { getOpeningHours } from '../data';
 import { useLanguage } from '../context/LanguageContext';
-import LanguageSwitcher from './LanguageSwitcher';
 
 interface FooterProps {
   onNavigate?: (page: 'home' | 'menu' | 'about', sectionId?: string) => void;
@@ -29,10 +28,14 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="lg:col-span-4 flex flex-col items-start pr-0 lg:pr-6">
             <button
               onClick={() => handleNav('home')}
-              className="flex items-center text-white hover:text-[#FCD306] transition-colors mb-4 cursor-pointer bg-transparent border-none p-0 text-left group"
-              aria-label="STACKD Home"
+              className="flex items-center text-white hover:opacity-90 transition-opacity mb-4 cursor-pointer bg-transparent border-none p-0 text-left group"
+              aria-label="O'délices Accueil"
             >
-              <span className="font-novecento text-4xl tracking-wider">STACKD</span>
+              <img
+                src="/assets/odelice-logo.svg"
+                alt="O'délices"
+                className="h-20 sm:h-24 w-auto brightness-0 invert object-contain"
+              />
             </button>
             <p className="text-white text-sm sm:text-base leading-relaxed mb-6 max-w-sm tracking-wider font-normal">
               {t.footer.tagline}
@@ -77,9 +80,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                 </svg>
               </a>
             </div>
-
-            {/* Language Switcher in footer */}
-            <LanguageSwitcher variant="footer" />
           </div>
 
           {/* Col 2: NAVIGATION Links */}

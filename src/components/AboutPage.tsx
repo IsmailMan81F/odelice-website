@@ -194,13 +194,6 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
                 <span>{t.hero.exploreMenu}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
-              <button
-                type="button"
-                className="inline-flex items-center gap-2.5 bg-[#FCD306] hover:bg-[#e6bd02] text-[#4b1007] tracking-widest text-lg px-8 py-3.5 rounded-md shadow-lg transition-transform duration-150 transform hover:scale-105 active:scale-95 uppercase font-normal cursor-pointer"
-              >
-                <span>{t.nav.orderNow}</span>
-                <ArrowRight className="w-4 h-4 text-[#4b1007]" />
-              </button>
             </div>
           </div>
 
