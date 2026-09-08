@@ -18,6 +18,10 @@ export default function FoodCard({ item }: FoodCardProps) {
           src={item.image}
           alt={item.name}
           referrerPolicy="no-referrer"
+          onError={(event) => {
+            event.currentTarget.src =
+              'https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=800&q=80';
+          }}
           className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
         />
       </div>

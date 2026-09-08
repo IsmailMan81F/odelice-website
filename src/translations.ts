@@ -9,8 +9,7 @@ export const translations = {
       about: 'À PROPOS',
     },
     hero: {
-      title1: 'GOURMAND, JUTEUX',
-      title2: 'BURGERS',
+      title: 'Gourmandise, fraîcheur & plaisir',
       exploreMenu: 'DÉCOUVRIR LE MENU',
     },
     quote: {

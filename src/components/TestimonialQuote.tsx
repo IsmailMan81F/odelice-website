@@ -14,10 +14,9 @@ export default function TestimonialQuote() {
           {t.quote.part1}{' '}
           <span className="inline-block align-middle mx-1 sm:mx-2 select-none">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFx06AM-RyrD0wjIOtvWjtnAPltRtjTVs9AtKl-KqFw1AXU-3TpKMVN_DuueD4WKeSYBz4KhBc03TlH4HQuScK_GPuc5h48kIKlM1fAYrBvgjzDfzMkEdfWJzgqtsv0nO9fUxqnR2nQ71QjWdq8HQ9FsTkrCCgJAIby-NeRCRZAHiwNV9NOamg8c3wHCKAdfuyx4rBJmzvWu9np7qKQ9MY40-dcFPihbV5C814k1tp7Fu62mCSofc"
-              alt="Chef icon badge"
-              referrerPolicy="no-referrer"
-              className="w-10 h-10 sm:w-14 sm:h-14 rounded-full border-2 border-[#4b1007] object-cover inline shadow-md"
+              src="/assets/icons/fast-food-hamburguer-svgrepo-com.svg"
+              alt="Burger icon"
+              className="w-10 h-10 sm:w-14 sm:h-14 object-contain inline"
             />
           </span>
           {t.quote.part2}
@@ -25,7 +24,11 @@ export default function TestimonialQuote() {
           {t.quote.part3}
           <br />
           <span className="inline-block align-middle mx-1 select-none">
-            <span className="text-3xl sm:text-5xl">🍔</span>
+            <img
+              src="/assets/icons/fast-food-hamburguer-svgrepo-com (1).svg"
+              alt="Fast food icon"
+              className="w-10 h-10 sm:w-14 sm:h-14 object-contain inline"
+            />
           </span>
           {t.quote.part4}
         </h2>

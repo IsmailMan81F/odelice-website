@@ -16,7 +16,7 @@ export default function Hero({ onExploreMenu }: HeroProps) {
       {/* Background Storefront Image & Darkening Overlays */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/assets/hero-storefront.jpg"
+          src="/assets/hero image.png"
           alt="Restaurant O'délices"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover object-center filter brightness-[0.58] contrast-[1.18]"
@@ -30,11 +30,9 @@ export default function Hero({ onExploreMenu }: HeroProps) {
       <div className="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center justify-center pt-16 px-4">
         <h1
           id="hero-title"
-          className="font-novecento text-[#FCD306] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-[0.88] uppercase tracking-tight drop-shadow-[0_8px_30px_rgba(0,0,0,0.8)] select-none"
+          className="font-novecento text-[#FCD306] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] leading-[0.88] tracking-tight drop-shadow-[0_8px_30px_rgba(0,0,0,0.8)] select-none"
         >
-          {t.hero.title1}
-          <br />
-          {t.hero.title2}
+          {t.hero.title}
         </h1>
 
         {/* Red CTA Button with Arrow */}
