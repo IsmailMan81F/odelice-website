@@ -6,6 +6,13 @@ interface FooterProps {
   onNavigate?: (sectionId: string) => void;
 }
 
+const capitalizeText = (value: string) =>
+  value
+    .toLocaleLowerCase('fr-FR')
+    .split(' ')
+    .map((word) => (word ? `${word[0].toLocaleUpperCase('fr-FR')}${word.slice(1)}` : word))
+    .join(' ');
+
 export default function Footer({ onNavigate }: FooterProps) {
   const { language, t } = useLanguage();
   const openingHours = getOpeningHours(language);
@@ -91,13 +98,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.navigation}
             </h4>
-            <ul className="font-inter space-y-3 text-xs sm:text-sm text-white tracking-widest uppercase">
+            <ul className="font-inter space-y-3 text-xs sm:text-sm text-white tracking-widest">
               <li>
                 <button
                   onClick={() => scrollToSection('hero')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
-                  {t.nav.home}
+                  {capitalizeText(t.nav.home)}
                 </button>
               </li>
               <li>
@@ -105,7 +112,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   onClick={() => scrollToSection('menu')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
-                  {t.nav.menu}
+                  {capitalizeText(t.nav.menu)}
                 </button>
               </li>
               <li>
@@ -113,7 +120,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   onClick={() => scrollToSection('avis')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
-                  {t.nav.reviews}
+                  {capitalizeText(t.nav.reviews)}
                 </button>
               </li>
               <li>
@@ -121,7 +128,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   onClick={() => scrollToSection('contact')}
                   className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
                 >
-                  {t.nav.contact}
+                  {capitalizeText(t.nav.contact)}
                 </button>
               </li>
             </ul>
@@ -132,15 +139,15 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.location}
             </h4>
-            <div className="font-inter flex items-start gap-2.5 text-white text-sm sm:text-base tracking-wider mb-4">
+            <div className="font-inter flex items-start gap-2.5 text-white text-xs sm:text-sm tracking-wider mb-4">
               <MapPin className="w-5 h-5 text-white shrink-0 mt-0.5" />
-              <span className="text-white">Rue Larbi Ben Lamhidi (Faubourg) en face la protection civile 🚒</span>
+              <span className="text-white">{capitalizeText('Rue Larbi Ben Lamhidi (Faubourg) en face la protection civile 🚒')}</span>
             </div>
             <button
               type="button"
-              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
+              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-xs sm:text-sm"
             >
-              <span>{t.footer.viewInGoogleMaps}</span>
+              <span>{capitalizeText(t.footer.viewInGoogleMaps)}</span>
               <ExternalLink className="w-4 h-4" />
             </button>
           </div>
@@ -150,14 +157,14 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.openingHours}
             </h4>
-            <div className="font-inter text-sm sm:text-base text-white divide-y-2 divide-white/70 tracking-wider">
+            <div className="font-inter text-xs sm:text-sm text-white divide-y-2 divide-white/70 tracking-wider">
               {openingHours.map((oh) => (
                 <div key={oh.day} className="flex justify-between py-2.5">
-                  <span className="text-white tracking-widest uppercase">
-                    {oh.day}
+                  <span className="text-white tracking-widest">
+                    {capitalizeText(oh.day)}
                   </span>
                   <span className="tracking-widest text-white">
-                    {oh.hours}
+                    {capitalizeText(oh.hours)}
                   </span>
                 </div>
               ))}
