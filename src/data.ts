@@ -558,23 +558,23 @@ export const TESTIMONIALS_FR: Testimonial[] = [
 ];
 
 export const OPENING_HOURS_EN: OpeningHour[] = [
-  { day: 'SATURDAY', hours: '11 AM–12 AM' },
-  { day: 'SUNDAY', hours: '11 AM–12 AM' },
-  { day: 'MONDAY', hours: '11 AM–12 AM' },
-  { day: 'TUESDAY', hours: '11 AM–12 AM' },
-  { day: 'WEDNESDAY', hours: '11 AM–12 AM' },
-  { day: 'THURSDAY', hours: '11 AM–12 AM' },
-  { day: 'FRIDAY', hours: '3:30 PM–12 AM' },
+  { day: 'SATURDAY', hours: '11 AM–00.00 AM' },
+  { day: 'SUNDAY', hours: '11 AM–00.00 AM' },
+  { day: 'MONDAY', hours: '11 AM–00.00 AM' },
+  { day: 'TUESDAY', hours: '11 AM–00.00 AM' },
+  { day: 'WEDNESDAY', hours: '11 AM–00.00 AM' },
+  { day: 'THURSDAY', hours: '11 AM–00.00 AM' },
+  { day: 'FRIDAY', hours: '3:30 PM–00.00 AM' },
 ];
 
 export const OPENING_HOURS_FR: OpeningHour[] = [
-  { day: 'SAMEDI', hours: '11 AM–12 AM' },
-  { day: 'DIMANCHE', hours: '11 AM–12 AM' },
-  { day: 'LUNDI', hours: '11 AM–12 AM' },
-  { day: 'MARDI', hours: '11 AM–12 AM' },
-  { day: 'MERCREDI', hours: '11 AM–12 AM' },
-  { day: 'JEUDI', hours: '11 AM–12 AM' },
-  { day: 'VENDREDI', hours: '3:30 PM–12 AM' },
+  { day: 'SAMEDI', hours: '11 AM–00.00 AM' },
+  { day: 'DIMANCHE', hours: '11 AM–00.00 AM' },
+  { day: 'LUNDI', hours: '11 AM–00.00 AM' },
+  { day: 'MARDI', hours: '11 AM–00.00 AM' },
+  { day: 'MERCREDI', hours: '11 AM–00.00 AM' },
+  { day: 'JEUDI', hours: '11 AM–00.00 AM' },
+  { day: 'VENDREDI', hours: '3:30 PM–00.00 AM' },
 ];
 
 export function getMenuItems(language?: Language): MenuItem[] {
