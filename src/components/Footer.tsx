@@ -91,7 +91,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.navigation}
             </h4>
-            <ul className="font-inter space-y-3 text-sm sm:text-base text-white tracking-widest uppercase">
+            <ul className="font-inter space-y-3 text-xs sm:text-sm text-white tracking-widest uppercase">
               <li>
                 <button
                   onClick={() => scrollToSection('hero')}
@@ -138,7 +138,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
             <button
               type="button"
-              className="font-inter inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
+              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
             >
               <span>{t.footer.viewInGoogleMaps}</span>
               <ExternalLink className="w-4 h-4" />

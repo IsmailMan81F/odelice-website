@@ -15,12 +15,16 @@ export default function Hero({ onExploreMenu }: HeroProps) {
     >
       {/* Background Storefront Image & Darkening Overlays */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img
-          src="/assets/hero image.png"
-          alt="Restaurant O'délices"
-          referrerPolicy="no-referrer"
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          aria-label="Restaurant O'délices"
           className="w-full h-full object-cover object-center filter brightness-[0.58] contrast-[1.18]"
-        />
+        >
+          <source src="/assets/hero-video/hero video.mp4" type="video/mp4" />
+        </video>
         {/* Darkening Gradients */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-black/75" />
         <div className="absolute inset-0 bg-[#120505]/40" />
