@@ -91,7 +91,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.navigation}
             </h4>
-            <ul className="space-y-3 text-sm sm:text-base text-white tracking-widest uppercase">
+            <ul className="font-inter space-y-3 text-sm sm:text-base text-white tracking-widest uppercase">
               <li>
                 <button
                   onClick={() => scrollToSection('hero')}
@@ -132,13 +132,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.location}
             </h4>
-            <div className="flex items-start gap-2.5 text-white text-sm sm:text-base tracking-wider mb-4">
+            <div className="font-inter flex items-start gap-2.5 text-white text-sm sm:text-base tracking-wider mb-4">
               <MapPin className="w-5 h-5 text-white shrink-0 mt-0.5" />
-              <span className="uppercase text-white">LOCATION DETAILS</span>
+              <span className="text-white">Rue Larbi Ben Lamhidi (Faubourg) en face la protection civile 🚒</span>
             </div>
             <button
               type="button"
-              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
+              className="font-inter inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base uppercase"
             >
               <span>{t.footer.viewInGoogleMaps}</span>
               <ExternalLink className="w-4 h-4" />
@@ -150,7 +150,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.openingHours}
             </h4>
-            <div className="text-sm sm:text-base text-white divide-y-2 divide-white/70 tracking-wider">
+            <div className="font-inter text-sm sm:text-base text-white divide-y-2 divide-white/70 tracking-wider">
               {openingHours.map((oh) => (
                 <div key={oh.day} className="flex justify-between py-2.5">
                   <span className="text-white tracking-widest uppercase">
