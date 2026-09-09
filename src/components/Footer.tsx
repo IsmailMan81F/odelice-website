@@ -143,13 +143,15 @@ export default function Footer({ onNavigate }: FooterProps) {
               <MapPin className="w-5 h-5 text-white shrink-0 mt-0.5" />
               <span className="text-white">{capitalizeText('Rue Larbi Ben Lamhidi (Faubourg) en face la protection civile 🚒')}</span>
             </div>
-            <button
-              type="button"
-              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-xs sm:text-sm"
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=RQ99%2BGP6%2C%20Jijel"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 text-[#FCD306] hover:text-white transition-colors tracking-widest text-sm sm:text-base"
             >
               <span>{capitalizeText(t.footer.viewInGoogleMaps)}</span>
               <ExternalLink className="w-4 h-4" />
-            </button>
+            </a>
           </div>
 
           {/* Col 4: OPENING HOURS */}
