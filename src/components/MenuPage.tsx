@@ -1,15 +1,14 @@
 import { useState } from 'react';
-import { Sparkles } from 'lucide-react';
-import { getMenuCategories } from '../data';
+import { MENU_IMAGE_GROUPS } from '../menuImageData';
 import { useLanguage } from '../context/LanguageContext';
-import FoodCard from './FoodCard';
 import MarqueeRibbon from './MarqueeRibbon';
+import MenuImageLayout from './MenuImageLayout';
 
 export default function MenuPage() {
   const { language, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const categories = getMenuCategories(language);
+  const categories = MENU_IMAGE_GROUPS;
 
   const filteredCategories =
     selectedCategory === 'all'
@@ -97,36 +96,7 @@ export default function MenuPage() {
 
       {/* Main Categories Section */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16">
-        {filteredCategories.map((category) => (
-          <section
-            key={category.id}
-            id={`category-${category.id}`}
-            className="mb-14 sm:mb-20 scroll-mt-24"
-          >
-            {/* Category Header: #4b1007 text with Yellow Background */}
-            <div className="bg-[#FCD306] text-[#4b1007] px-5 sm:px-8 py-3 sm:py-4 rounded-xl shadow-sm mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border border-[#e6bd02]">
-              <div className="flex items-center gap-3">
-                <h2 className="font-novecento text-3xl sm:text-4xl md:text-5xl uppercase tracking-wider font-normal leading-none text-[#4b1007]">
-                  {category.name}
-                </h2>
-                <span className="text-xs sm:text-sm bg-[#4b1007] text-[#FCD306] px-2.5 py-0.5 rounded-md tracking-widest font-normal">
-                  {category.items.length} {t.menuPage.options}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-[#4b1007] text-xs sm:text-sm md:text-base tracking-wider uppercase">
-                <Sparkles className="w-4 h-4 text-[#4b1007] hidden sm:inline" />
-                <span>{category.tagline}</span>
-              </div>
-            </div>
-
-            {/* Grid of Food Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
-              {category.items.map((item) => (
-                <FoodCard key={item.id} item={item} />
-              ))}
-            </div>
-          </section>
-        ))}
+        <MenuImageLayout groups={filteredCategories} />
 
         {/* Bottom CTA Box after all cards */}
         <div className="mt-16 sm:mt-24 mb-6 text-center bg-[#4b1007] text-white p-8 sm:p-12 rounded-2xl border border-[#350b05] shadow-2xl max-w-3xl mx-auto">
