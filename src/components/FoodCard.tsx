@@ -118,7 +118,7 @@ export default function FoodCard({ item }: FoodCardProps) {
             role="dialog"
             aria-modal="true"
             aria-label={item.alt}
-            className="relative max-h-[calc(100vh-3rem)] max-w-[min(92vw,1100px)] overflow-hidden rounded-xl border-2 border-white/70 bg-white shadow-2xl animate-[modal-slide-in_420ms_cubic-bezier(0.22,1,0.36,1)]"
+            className="relative max-h-[calc(100vh-3rem)] max-w-[min(92vw,1100px)] overflow-hidden rounded-xl border-2 border-[#8e7b6d] bg-white shadow-2xl animate-[modal-slide-in_420ms_cubic-bezier(0.22,1,0.36,1)]"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="absolute right-3 top-3 z-10 flex gap-2">
