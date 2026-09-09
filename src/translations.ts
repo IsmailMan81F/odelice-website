@@ -37,7 +37,7 @@ export const translations = {
     menu: {
       title: 'MENU',
       subtitle:
-        'PIZZAS ARTISANALES • BURGERS SAVOUREUX • TACOS GOURMANDS • ASSIETTES & BOISSONS',
+        'PIZZAS ARTISANALES • BURGERS SAVOUREUX • TACOS GOURMANDS • ASSIETTES, SANDWICHS & ENTRÉES',
       allItems: 'TOUT LE MENU',
     },
     menuPage: {

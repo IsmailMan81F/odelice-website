@@ -294,49 +294,6 @@ export const MENU_CATEGORIES_EN: MenuCategory[] = [
       },
     ],
   },
-  {
-    id: 'drinks',
-    name: 'DRINKS',
-    tagline: 'ICE-COLD SODAS, HOMEMADE MOJITOS & REFRESHING BEVERAGES',
-    items: [
-      {
-        id: 'drink-1',
-        name: 'CHILLED CAN SODA (33CL)',
-        description: 'Coca-Cola, Sprite, Fanta, or Schweppes served ice-cold to accompany your meal.',
-        price: 150,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-2',
-        name: 'HOUSE VIRGIN MOJITO',
-        description: 'Muddled fresh mint, hand-squeezed lime juice, pure cane sugar, and sparkling soda.',
-        price: 350,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-3',
-        name: 'FRESH SQUEEZED ORANGE JUICE',
-        description: '100% natural pure orange juice pressed to order with vibrant citrus sweetness.',
-        price: 300,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-4',
-        name: 'PURE MINERAL WATER (50CL)',
-        description: 'Chilled natural still mineral water for pure refreshment.',
-        price: 70,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=800&q=80',
-      },
-    ],
-  },
 ];
 
 export const MENU_CATEGORIES_FR: MenuCategory[] = [
@@ -512,134 +469,91 @@ export const MENU_CATEGORIES_FR: MenuCategory[] = [
       },
     ],
   },
-  {
-    id: 'drinks',
-    name: 'BOISSONS',
-    tagline: 'SODAS GLACÉS, MOJITOS ARTISANAUX, JUS FRAIS & BOISSONS DÉSALTÉRANTES',
-    items: [
-      {
-        id: 'drink-1',
-        name: 'CANETTE SODA FRAÎCHE (33CL)',
-        description: 'Coca-Cola, Sprite, Fanta Orange ou Tropico servi ultra frais pour accompagner votre repas.',
-        price: 150,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-2',
-        name: 'MOJITO ARTISANAL VIRGIN MAISON',
-        description: 'Menthe fraîche pilée, jus de citron vert pressé à la main, sucre de canne et eau pétillante gazeuse.',
-        price: 350,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-3',
-        name: 'JUS NATUREL D’ORANGE PRESSÉE',
-        description: 'Oranges gorgées de soleil pressées à la commande, 100% pur jus vitaminé sans sucre ajouté.',
-        price: 300,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=800&q=80',
-      },
-      {
-        id: 'drink-4',
-        name: 'EAU MINÉRALE NATURELLE (50CL)',
-        description: 'Bouteille d’eau minérale fraîche de source naturelle, pure et très désaltérante.',
-        price: 70,
-        rating: 5,
-        category: 'drinks',
-        image: 'https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=800&q=80',
-      },
-    ],
-  },
 ];
 
 export const TESTIMONIALS_EN: Testimonial[] = [
   {
     id: 't1',
-    name: 'DARRELL STEWARD',
-    title: 'ABSOLUTELY DELIGHTED!',
+    name: 'NADJIB HAFIANE',
+    title: 'TASTES SO GOOD!',
     quote:
-      '“From the moment we walked in, everything felt just right. The team was welcoming, the food was rich in flavor, and the atmosphere made our evening extra special. We’ll definitely make this our go-to spot moving forward. Loved every minute of it!”',
+      '“Tastes so good😍😍😍😍 very cosy place. The service is so much respectful and kind😃😃. I highly recommend their TACOS 😋😋 …”',
     rating: 5,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAKPU9EX7yabdB3Zp-8XWhgLG0pDXkJpu0RgIvbR0Ln2r8FZ--rDL34yS2QppfAQoNCGEu3RSXst7ofnSBv_0sVhWXA2FFP23qQjuoGWZ91mIm0G3Uz65TCe_qknNpdBvTrDrHuRVHQ1__u72QcyMhmFOIFbxrESv4cqGZ9VKD7uEACaztwID0w8WCnJtWNSTpv_abn_jNjkUQ_BNcr18G_Zh4yYr2E5sN0A1A1niEk8mzpQYE8Dmw',
+      'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=240&q=80',
   },
   {
     id: 't2',
-    name: 'JASON TURNER',
-    title: 'LOVED EVERYTHING!',
+    name: 'MAVI OCEAN',
+    title: 'WELCOMING ATMOSPHERE!',
     quote:
-      '“The food was outstanding with great variety, beautifully presented, and the ambiance made the experience even better. Truly a hidden gem with amazing service, we can’t wait to return.”',
-    rating: 5,
+      '“I liked the atmosphere of the place!! Location also is good, at least for me 😅. Anyway, it is very well organized and the STAFF working there are very welcoming and respectful. 👍🏻🥰💝”',
+    rating: 4,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCpQClOPvHCiaLafhryVAl1N9immAX6_8BkgF5Ts8xKQ0YLJAQR1Lhau8zYJdT_P6QEVNnWSJVi-iZSEkF9ANfkxlY-X3VunOhnIm76zwbrF92Z16Q0OhDWZ0TzPG0sNBtqJDxnd39uGJW3vQGE5yVhmIKL35-k2iHeqzzg-AJxCBL8Ux7uqZ38akbpGDOBjcWEB7X44GDfc4RN6QquJeUCIJD_d1Isw2paXgnG0dqgHKGpx1DxYXA',
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=240&q=80',
   },
   {
     id: 't3',
-    name: 'NICOLE ALLEN',
-    title: 'FLAVORFUL & FRESH!',
+    name: 'ANIS LOURICHE',
+    title: 'LOVED THE TACOS!',
     quote:
-      '“The ingredients tasted incredibly fresh, and you could tell everything was made with love. The space felt clean, modern, and cozy. Every dish had something special in it. Easily one of the best dining experiences I’ve had in a long time!”',
-    rating: 5,
+      '“I loved their tacos.”',
+    rating: 4,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuC31mpsHMaBuPtQ8AOtjpMzwOINVnMFuKoRFpurHxW58zlJOkmNPjiRDn5UZaTiarCJzHJf1AqjVPjCo6iXKgP4Ieg7KSAWdcyClwWmjh3V0RhM4cUBVN-zmOucsTwwfJhGjLCzzOD2UibBZX9wlL1tQCZxkoRQLvA8rpGHX2ovgkkaBXFrv-1jvOjwg-Z-EUPJLhgVX__541zSgWi-6luhSeGnldfmkycAqQJuzOuuqexgTsT8lQE',
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=240&q=80',
   },
   {
     id: 't4',
-    name: 'MALIK BENALIA',
-    title: 'UNBEATABLE QUALITY!',
+    name: 'SAMIR BOUCHEMA',
+    title: 'EXCELLENT CUISINE!',
     quote:
-      '“The burgers are hands down the best in Jijel. Generous portions, fresh brioche buns, and hot crispy fries. The staff is super polite and attentive. A must-visit destination!”',
+      '“Remarkable cuisine with great variety, very careful presentation and a superb atmosphere. A real gem with impeccable service, we will come back very soon!”',
     rating: 5,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBRtns7smdj1c0O9Qe22sywcRAiOyJNk6Oq6mJPEgywyuMtv6i1Eg0Yen3D0wpjI9403M7K-m2o4ba29KLeOPMVKV4kjssOwVnTQ_3J1v7xS4tvkS6amIJykrHJhtJFcI90jL2350rALqt51TmvkVsgUuq6XbMJtJzwSfqlsH92VmxQQrNMs31FwRjFZy-534EX3Hr79ukOH_PWhOAyIzc05jG1bNSS0pVoyYrTeA0HDKgjoXlvIVw',
+      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=240&q=80',
   },
 ];
 
 export const TESTIMONIALS_FR: Testimonial[] = [
   {
     id: 't1',
-    name: 'DARRELL STEWARD',
-    title: 'ABSOLUMENT RAVI !',
+    name: 'NADJIB HAFIANE',
+    title: 'TELLEMENT BON !',
     quote:
-      '« Dès que nous sommes entrés, tout était parfait. L’accueil chaleureux, des plats débordants de saveurs et une ambiance qui a rendu notre soirée inoubliable. Ce sera sans hésiter notre adresse préférée désormais ! »',
+      '« Tellement bon😍😍😍😍 endroit très cosy. Le service est très respectueux et chaleureux😃😃. Je recommande vivement leurs TACOS 😋😋 … »',
     rating: 5,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAKPU9EX7yabdB3Zp-8XWhgLG0pDXkJpu0RgIvbR0Ln2r8FZ--rDL34yS2QppfAQoNCGEu3RSXst7ofnSBv_0sVhWXA2FFP23qQjuoGWZ91mIm0G3Uz65TCe_qknNpdBvTrDrHuRVHQ1__u72QcyMhmFOIFbxrESv4cqGZ9VKD7uEACaztwID0w8WCnJtWNSTpv_abn_jNjkUQ_BNcr18G_Zh4yYr2E5sN0A1A1niEk8mzpQYE8Dmw',
+      'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=240&q=80',
   },
   {
     id: 't2',
-    name: 'JASON TURNER',
-    title: 'TOUT ÉTAIT EXCELLENT !',
+    name: 'MAVI OCEAN',
+    title: 'AMBIANCE CHALEUREUSE !',
+    quote:
+      '« J’ai aimé l’ambiance de l’endroit ! L’emplacement est également agréable, du moins pour moi 😅. L’espace est très bien organisé et le personnel est très accueillant et respectueux. 👍🏻🥰💝 »',
+    rating: 4,
+    avatar:
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=240&q=80',
+  },
+  {
+    id: 't3',
+    name: 'ANIS LOURICHE',
+    title: 'J’AI ADORÉ LES TACOS !',
+    quote:
+      '« J’ai adoré leurs tacos. »',
+    rating: 4,
+    avatar:
+      'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=240&q=80',
+  },
+  {
+    id: 't4',
+    name: 'SAMIR BOUCHEMA',
+    title: 'CUISINE EXCELLENTE !',
     quote:
       '« Une cuisine remarquable avec une belle variété, une présentation très soignée et une superbe ambiance. Une véritable pépite avec un service irréprochable, nous reviendrons très vite ! »',
     rating: 5,
     avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCpQClOPvHCiaLafhryVAl1N9immAX6_8BkgF5Ts8xKQ0YLJAQR1Lhau8zYJdT_P6QEVNnWSJVi-iZSEkF9ANfkxlY-X3VunOhnIm76zwbrF92Z16Q0OhDWZ0TzPG0sNBtqJDxnd39uGJW3vQGE5yVhmIKL35-k2iHeqzzg-AJxCBL8Ux7uqZ38akbpGDOBjcWEB7X44GDfc4RN6QquJeUCIJD_d1Isw2paXgnG0dqgHKGpx1DxYXA',
-  },
-  {
-    id: 't3',
-    name: 'NICOLE ALLEN',
-    title: 'SAVOUREUX ET FRAIS !',
-    quote:
-      '« Les ingrédients sont d’une fraîcheur remarquable et tout est fait avec passion. Le cadre est propre, moderne et cosy. Chaque plat a une vraie touche d’originalité. Une de mes meilleures expériences ! »',
-    rating: 5,
-    avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuC31mpsHMaBuPtQ8AOtjpMzwOINVnMFuKoRFpurHxW58zlJOkmNPjiRDn5UZaTiarCJzHJf1AqjVPjCo6iXKgP4Ieg7KSAWdcyClwWmjh3V0RhM4cUBVN-zmOucsTwwfJhGjLCzzOD2UibBZX9wlL1tQCZxkoRQLvA8rpGHX2ovgkkaBXFrv-1jvOjwg-Z-EUPJLhgVX__541zSgWi-6luhSeGnldfmkycAqQJuzOuuqexgTsT8lQE',
-  },
-  {
-    id: 't4',
-    name: 'MALIK BENALIA',
-    title: 'QUALITÉ INÉGALÉE !',
-    quote:
-      '« Les burgers sont tout simplement les meilleurs de Jijel. Des portions généreuses, des buns briochés frais et des frites bien croustillantes. Le personnel est très attentionné. À ne pas manquer ! »',
-    rating: 5,
-    avatar:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBRtns7smdj1c0O9Qe22sywcRAiOyJNk6Oq6mJPEgywyuMtv6i1Eg0Yen3D0wpjI9403M7K-m2o4ba29KLeOPMVKV4kjssOwVnTQ_3J1v7xS4tvkS6amIJykrHJhtJFcI90jL2350rALqt51TmvkVsgUuq6XbMJtJzwSfqlsH92VmxQQrNMs31FwRjFZy-534EX3Hr79ukOH_PWhOAyIzc05jG1bNSS0pVoyYrTeA0HDKgjoXlvIVw',
+      'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=240&q=80',
   },
 ];
 

@@ -23,7 +23,7 @@ export default function MenuSection() {
           </h2>
 
           <p className="font-inter text-stone-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Pizzas artisanales façonnées à la main, burgers savoureux, tacos généreux, assiettes complètes et boissons fraîches.
+            Pizzas artisanales façonnées à la main, burgers savoureux, tacos généreux, assiettes complètes, sandwichs et entrées.
           </p>
         </div>
 
