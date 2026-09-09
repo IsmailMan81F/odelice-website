@@ -98,11 +98,11 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.navigation}
             </h4>
-            <ul className="font-inter space-y-3 text-xs sm:text-sm text-white tracking-widest">
+            <ul className="font-inter space-y-3 text-xs sm:text-sm text-white">
               <li>
                 <button
                   onClick={() => scrollToSection('hero')}
-                  className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
+                  className="text-white hover:text-[#FCD306] transition-colors cursor-pointer bg-transparent border-none p-0"
                 >
                   {capitalizeText(t.nav.home)}
                 </button>
@@ -110,7 +110,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('menu')}
-                  className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
+                  className="text-white hover:text-[#FCD306] transition-colors cursor-pointer bg-transparent border-none p-0"
                 >
                   {capitalizeText(t.nav.menu)}
                 </button>
@@ -118,7 +118,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('avis')}
-                  className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
+                  className="text-white hover:text-[#FCD306] transition-colors cursor-pointer bg-transparent border-none p-0"
                 >
                   {capitalizeText(t.nav.reviews)}
                 </button>
@@ -126,7 +126,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="text-white hover:text-[#FCD306] transition-colors tracking-widest cursor-pointer bg-transparent border-none p-0"
+                  className="text-white hover:text-[#FCD306] transition-colors cursor-pointer bg-transparent border-none p-0"
                 >
                   {capitalizeText(t.nav.contact)}
                 </button>
@@ -139,7 +139,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.location}
             </h4>
-            <div className="font-inter flex items-start gap-2.5 text-white text-xs sm:text-sm tracking-wider mb-4">
+            <div className="font-inter flex items-start gap-2.5 text-white text-xs sm:text-sm mb-4">
               <MapPin className="w-5 h-5 text-white shrink-0 mt-0.5" />
               <span className="text-white">{capitalizeText('Rue Larbi Ben Lamhidi (Faubourg) en face la protection civile 🚒')}</span>
             </div>
@@ -157,13 +157,13 @@ export default function Footer({ onNavigate }: FooterProps) {
             <h4 className="text-xl tracking-widest text-white uppercase mb-4 font-normal">
               {t.footer.openingHours}
             </h4>
-            <div className="font-inter text-xs sm:text-sm text-white divide-y-2 divide-white/70 tracking-wider">
+            <div className="font-inter text-xs sm:text-sm text-white divide-y-2 divide-white/70">
               {openingHours.map((oh) => (
                 <div key={oh.day} className="flex justify-between py-2.5">
-                  <span className="text-white tracking-widest">
+                  <span className="text-white">
                     {capitalizeText(oh.day)}
                   </span>
-                  <span className="tracking-widest text-white">
+                  <span className="text-white">
                     {capitalizeText(oh.hours)}
                   </span>
                 </div>
